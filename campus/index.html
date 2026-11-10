@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Abierto</title>
+  <meta name="description" content="Cursos y recursos gratuitos para prepararte para el mundo del trabajo.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar no-print">
+    <a href="#/" class="brand" id="brand">Campus</a>
+    <nav class="topnav">
+      <a href="#/">Cursos</a>
+      <span class="who" id="who" hidden></span>
+    </nav>
+  </header>
+
+  <div class="banner no-print" id="banner-prueba" hidden>
+    Modo prueba: el registro queda solo en este navegador. Configurá FormAssembly en <code>contenido.js</code> para recibir los datos en Salesforce.
+  </div>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="footer no-print" id="footer"></footer>
+
+  <dialog id="registro">
+    <form id="form-registro" method="dialog">
+      <h2 id="reg-titulo">Registrate para empezar</h2>
+      <p class="muted" id="reg-texto">Es gratis. Lo usamos para guardar tu avance y emitir tu certificado.</p>
+      <label>Nombre y apellido<input name="nombre" required autocomplete="name"></label>
+      <label>Mail<input name="email" type="email" required autocomplete="email"></label>
+      <label class="check" id="consent-row"><input type="checkbox" name="consentimiento" required><span id="txt-consent"></span></label>
+      <div class="actions">
+        <button type="button" class="btn ghost" id="cancelar-registro">Ahora no</button>
+        <button type="submit" class="btn">Empezar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="contenido.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
